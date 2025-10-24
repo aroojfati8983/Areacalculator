@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculator</title>
+</head>
+<body>
+    <h1>Area Calculator</h1>
+    <form onsubmit="AreaTriangleCalculator();return false;">
+        <input type="step" name="base"id="base"Placeholder="Enter base"/><br><br>
+<input type="step" name="height"id="height"Placeholder="Enter height"/><br><br>
+
+<button type="submit">Calculate Area</button>
+    </form>
+    <p id="Result"></p>
+    <script>
+        function AreaTriangleCalculator(){
+            const baseRef=document.querySelector("#base");
+            const heightRef=document.querySelector("#height");
+            const resultRef=document.querySelector("#Result");
+
+            let base=baseRef.value;
+             let height=heightRef.value;
+
+
+            base=Number(base);
+            height=Number(height);
+            console.log("Height", height);
+             console.log( "Base",base);
+            const area=1/2*base*height;
+            console.log("Area",area);
+            
+
+            //result
+            resultRef.innerText="area: " + area.toFixed(2);
+        }
+    </script>
+</body>
+</html>
